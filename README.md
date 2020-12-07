@@ -35,7 +35,7 @@
 </details>
 
 
-<details><summary>Visualizers</summary>
+<details><summary>✨ Visualizers</summary>
 <p>
   <img src="screenshots/visualizers.png">
 
@@ -58,7 +58,7 @@
 </p>
 </details>
 
-<details><summary>Spotify</summary>
+<details><summary> 🎵 Spotify</summary>
 <p>
   <img src="screenshots/spotify.png">
 
@@ -66,7 +66,7 @@
 </p>
 </details>
 
-<details><summary>cmus</summary>
+<details><summary>🎶cmus</summary>
 <p>
   <img src="screenshots/cmus.png">
 
