@@ -36,7 +36,17 @@ Custom `vi` mode indicators in the fish shell!
 
 ![](screenshots/weechat.png)
 
+### Spotify
 
+![](screenshots/spotify.png)
+
+Spotify with `spicetify` theme
+
+### cmus
+
+![](screenshots/cmus.png)
+
+`cmus` + `cava`, a classic combo
 
 ## System
 
