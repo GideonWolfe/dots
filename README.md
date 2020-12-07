@@ -18,6 +18,14 @@
 </p>
 </details>
 
+<details><summary>🔔 dunst</summary>
+<p>
+  <img src="screenshots/notifications.png.gif">
+
+  A few examples of `dunst` notifications
+</p>
+</details>
+
 <details><summary>🔮 polybar</summary>
 <p>
 
