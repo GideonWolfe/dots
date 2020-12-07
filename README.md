@@ -1,6 +1,6 @@
 # Gallery
 
-<details><summary><code>Firefox</code> 🦊</summary>
+<details><summary>🦊 Firefox</summary>
 <p>
   <img src="screenshots/firefox.png">
 
@@ -8,7 +8,7 @@
 </p>
 </details>
 
-<details><summary><code>neomutt</code> 🐶</summary>
+<details><summary>v🐶 eomutt</summary>
 <p>
   <img src="screenshots/neomutt.png">
 
