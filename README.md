@@ -1,6 +1,12 @@
 # dots
 🌀 my linux configuration
 
+### Firefox
+
+![](screenshots/firefox.png)
+
+Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage with [startTree](https://github.com/Paul-Houser/StartTree), custom `userChrome.css`
+
 ## System
 
 - [i3-gaps](https://github.com/Airblader/i3): Tiling window manager
