@@ -115,6 +115,14 @@
 </p>
 </details>
 
+<details><summary>📜 LaTeX</summary>
+<p>
+  <img src="screenshots/latex.png">
+
+  Autocompilation and preview in `zathura`
+</p>
+</details>
+
 <details><summary>📉 gnuplot</summary>
 <p>
   <img src="screenshots/gnuplot.png">
@@ -146,6 +154,14 @@
 
   Various applications like `Qualculate` (left) and `translate-shell` (right) I use often enough to pin to the scrathpad and bind toggling to a keybind.
 
+</p>
+</details>
+
+<details><summary>📜 PDFs</summary>
+<p>
+  <img src="screenshots/zathura.png">
+
+  `zathura` using my `Zathura-Pywal` tool
 </p>
 </details>
 
