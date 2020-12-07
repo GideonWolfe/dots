@@ -10,6 +10,14 @@
 </p>
 </details>
 
+<details><summary>🦊 Firefox</summary>
+<p>
+  <img src="screenshots/firefox.png">
+
+  Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage with [startTree](https://github.com/Paul-Houser/StartTree), custom `userChrome.css`
+</p>
+</details>
+
 <details><summary>🦎 Chameleon</summary>
 <p>
   <img src="screenshots/chameleon.gif">
@@ -71,15 +79,6 @@
 </p>
 </details>
 
-## Web
-
-<details><summary>🦊 Firefox</summary>
-<p>
-  <img src="screenshots/firefox.png">
-
-  Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage with [startTree](https://github.com/Paul-Houser/StartTree), custom `userChrome.css`
-</p>
-</details>
 
 ## Communication
 
