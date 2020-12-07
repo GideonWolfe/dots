@@ -124,6 +124,15 @@
 </p>
 </details>
 
+<details><summary>🗒️  Scratchpad</summary>
+<p>
+  <img src="screenshots/scratchpad.png">
+
+  Various applications like `Qualculate` (left) and `translate-shell` (right) I use often enough to pin to the scrathpad and bind toggling to a keybind.
+
+</p>
+</details>
+
 
 ## Entertainment
 
