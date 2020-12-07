@@ -102,6 +102,15 @@
 </p>
 </details>
 
+
+<details><summary>🚀 rofi</summary>
+<p>
+  <img src="screenshots/rofi.png">
+
+  `rofi` with custom theme
+</p>
+</details>
+
 # Applications
 
 ## System
