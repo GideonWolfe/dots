@@ -26,6 +26,11 @@ Ummm... Completely stock Discord client... Nothing to see here Officer.
 Custom `vi` mode indicators in the fish shell!
 
 
+### Visualizers
+
+![](screenshots/visualizers.png)
+
+`cava` (top left) and various `glava` shaders.
 
 ## System
 
