@@ -8,7 +8,7 @@
 </p>
 </details>
 
-<details><summary>v🐶 eomutt</summary>
+<details><summary>🐶 neomutt</summary>
 <p>
   <img src="screenshots/neomutt.png">
 
@@ -17,40 +17,33 @@
 </details>
 
 
+<details><summary>🌀 Discord</summary>
+<p>
+  <img src="screenshots/discord.png">
+
+  Ummm... Completely stock Discord client... Nothing to see here Officer.
+</p>
+</details>
 
 
+<details><summary>🐟 Fish</summary>
+<p>
+  <img src="screenshots/vimode.png">
+
+  Custom `vi` mode indicators in the fish shell!
+</p>
+</details>
 
 
-### Firefox
+<details><summary>Visualizers</summary>
+<p>
+  <img src="screenshots/visualizers.png">
 
-![](screenshots/firefox.png)
-
-Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage with [startTree](https://github.com/Paul-Houser/StartTree), custom `userChrome.css`
-
-### neomutt
-
-![](screenshots/neomutt.png)
-
-`neomutt` is looking good, might as well showcase some classic spam... 
-
-### Discord
-
-![](screenshots/discord.png)
-
-Ummm... Completely stock Discord client... Nothing to see here Officer.
-
-### Fish
-
-![](screenshots/vimode.png)
-
-Custom `vi` mode indicators in the fish shell!
+  `cava` (top left) and various `glava` shaders.
+</p>
+</details>
 
 
-### Visualizers
-
-![](screenshots/visualizers.png)
-
-`cava` (top left) and various `glava` shaders.
 
 ### Weechat
 
