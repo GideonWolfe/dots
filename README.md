@@ -17,6 +17,8 @@ Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage
 
 ![](screenshots/discord.png)
 
+Ummm... Completely stock Discord client... Nothing to see here Officer.
+
 ### Fish
 
 ![](screenshots/vimode.png)
@@ -24,7 +26,6 @@ Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage
 Custom `vi` mode indicators in the fish shell!
 
 
-Ummm... Completely stock Discord client... Nothing to see here Officer.
 
 ## System
 
