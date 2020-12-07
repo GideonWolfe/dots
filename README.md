@@ -130,6 +130,12 @@
 </p>
 </details>
 
+<details><summary> 📈 matplotlib</summary>
+<p>
+  <img src="screenshots/matplotlib.png">
+</p>
+</details>
+
 <details><summary>📝 Notes</summary>
 <p>
   <img src="screenshots/markdown1.png">
