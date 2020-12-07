@@ -187,7 +187,7 @@
 </details>
 
 
-<details><summary>📜 Files</summary>
+<details><summary>📁 Files</summary>
 <p>
   <img src="screenshots/files.png">
 
