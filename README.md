@@ -13,6 +13,11 @@ Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage
 
 `neomutt` is looking good, might as well showcase some classic spam... 
 
+### Discord
+
+![](screenshots/discord.png)
+
+Ummm... Completely stock Discord client... Nothing to see here Officer.
 
 ## System
 
