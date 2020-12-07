@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+# Mark commit on habit tracker
+dijo -c "track-up commits"
+
+# parse git log for info
+COMMITNOTIFICATION=$(git log -1 HEAD --format=reference)
+notify-send  'Git Commit Success' "$COMMITNOTIFICATION" -u low
