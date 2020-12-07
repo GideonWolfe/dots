@@ -94,6 +94,14 @@
 </p>
 </details>
 
+<details><summary>💠 picom</summary>
+<p>
+  <img src="screenshots/picomtoggle.gif">
+
+  `picom` toggle located on polybar
+</p>
+</details>
+
 # Applications
 
 ## System
