@@ -1,0 +1,488 @@
+# ___  ________          ________  ________  ________   ________ ___  ________     
+#|\  \|\_____  \        |\   ____\|\   __  \|\   ___  \|\  _____\\  \|\   ____\    
+#\ \  \|____|\ /_       \ \  \___|\ \  \|\  \ \  \\ \  \ \  \__/\ \  \ \  \___|    
+# \ \  \    \|\  \       \ \  \    \ \  \\\  \ \  \\ \  \ \   __\\ \  \ \  \  ___  
+#  \ \  \  __\_\  \       \ \  \____\ \  \\\  \ \  \\ \  \ \  \_| \ \  \ \  \|\  \ 
+#   \ \__\|\_______\       \ \_______\ \_______\ \__\\ \__\ \__\   \ \__\ \_______\
+#    \|__|\|_______|        \|_______|\|_______|\|__| \|__|\|__|    \|__|\|_______|
+
+
+# exec xrandr --output HDMI-1 --right-of DP-1 --rotate left
+# exec xrandr --output DP-2 --left-of DP-1
+exec /home/gideon/.screenlayout/test.sh
+
+###############
+# Keybindings #
+###############
+
+
+# Mod Key Binding
+# %%hotkey: i3 Key%%
+set $mod Mod4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+# %%hotkey: urxvt%%
+# bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id alacritty
+
+# kill focused window
+# %%hotkey: Kill Focused Window%%
+bindsym $mod+Shift+q kill
+
+# start rofi (a program launcher)
+# %%hotkey: rofi%%
+# bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec fish -c "rofi -show run"
+
+# %%hotkey: rofi%%
+bindsym --whole-window $mod+button3 exec --no-startup-id /home/gideon/dotfiles/dotfiles/scripts/xmenu.sh
+# bindsym --whole-window button3+button1 exec urxvt
+
+# show i3 keybinds
+# needed to be symkinked to /usr/bin
+# bindsym $mod+p exec dmenu_hotkeys run -m rofi -a i3
+# %%hotkey: Switch to program%%
+bindsym $mod+p exec rofi -show window
+
+
+# Open clipboard
+bindsym $mod+Shift+c exec "rofi -modi 'clipboard:greenclip print' -show clipboard"
+
+
+# change focus
+# %%hotkey: Focus Left%%
+bindsym $mod+h focus left
+# %%hotkey: Focus Down%%
+bindsym $mod+j focus down
+# %%hotkey: Focus Up%%
+bindsym $mod+k focus up
+# %%hotkey: Focus Right%%
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+# %%hotkey: Focus Left%%
+bindsym $mod+Left focus left
+# %%hotkey: Focus Down%%
+bindsym $mod+Down focus down
+# %%hotkey: Focus Up%%
+bindsym $mod+Up focus up
+# %%hotkey: Focus Right%%
+bindsym $mod+Right focus right
+
+# move focused window
+# %%hotkey: Move Window Left%%
+bindsym $mod+Shift+h move left
+# %%hotkey: Move Window Down%%
+bindsym $mod+Shift+j move down
+# %%hotkey: Move Window Up%%
+bindsym $mod+Shift+k move up
+# %%hotkey: Move Window Right%%
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+# %%hotkey: Move Window Left%%
+bindsym $mod+Shift+Left move left
+# %%hotkey: Move Window Down%%
+bindsym $mod+Shift+Down move down
+# %%hotkey: Move Window Up%%
+bindsym $mod+Shift+Up move up
+# %%hotkey: Move Window Right%%
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+# %%hotkey: Horizontal Split Mode%%
+bindsym $mod+b split h
+
+# split in vertical orientation
+# %%hotkey: Vertical Split Mode%%
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+# %%hotkey: Fullscreen Mode Mode%%
+bindsym $mod+Shift+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+# %%hotkey: Stacked Layout Mode%%
+bindsym $mod+s layout stacking
+# %%hotkey: Tabbed Layout Mode%%
+bindsym $mod+w layout tabbed
+# %%hotkey: Split Layout Mode%%
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+# %%hotkey: Toggle Tiling/Floating%%
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+# %%hotkey: Toggle Focus Tiling/Floating%%
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+# %%hotkey: Focus Parent Container%%
+bindsym $mod+a focus parent
+
+# focus the child container
+# %%hotkey: Focus Child Container%%
+#bindsym $mod+d focus child
+
+# middle mouse on title bars/borders kills window
+# %%hotkey: Kill Window%%
+bindsym --border button2 kill
+
+# %%hotkey: Toggle Floating Window%%
+bindsym --border button3 floating toggle
+
+# reload the configuration file
+# %%hotkey: Reload Configuration File%%
+# bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# %%hotkey: Restart i3%%
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+
+# %%hotkey: Logout Menu%%
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+# %%hotkey: Resize Mode%%
+bindsym $mod+r mode "resize"
+
+
+################
+# Workstations #
+################
+
+# set $ws1 "1: Music "
+# set $ws2 "2: Comms "
+# set $ws3 "3: Home "
+# set $ws4 "4: Web "
+# set $ws5 "5: School "
+# set $ws6 "6: Projects "
+# set $ws7 "7: Code "
+# set $ws8 "8: Monitor "
+# set $ws9 "9: 9"
+
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
+set $ws5 "5: "
+set $ws6 "6: "
+set $ws7 "7: "
+set $ws8 "8: "
+set $ws9 "9: "
+
+workspace $ws1 output DP-2
+workspace $ws2 output DP-2
+workspace $ws3 output DP-2
+workspace $ws4 output DP-1
+workspace $ws5 output DP-1
+workspace $ws6 output DP-1
+workspace $ws7 output HDMI-1
+workspace $ws8 output HDMI-1
+workspace $ws9 output HDMI-1
+
+
+
+# switch to workspace
+# %%hotkey: Switch To Workspace%%
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+
+# move focused container to workspace
+# %%hotkey: Move Container To Workspace%%
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+
+#############
+
+
+# Gaps settings
+new_window pixel 2
+for_window [class="^.*"] border pixel 2
+gaps inner 5
+gaps outer 5
+
+
+
+#Importing colors from .Xresources
+
+set_from_resource $bg           i3wm.color3 #ff0000
+set_from_resource $bg-alt       i3wm.color0 #ff0000
+set_from_resource $fg           i3wm.color15 #ff0000
+set_from_resource $fg-alt       i3wm.color2 #ff0000
+set_from_resource $hl           i3wm.color4 #ff0000
+
+set_from_resource $color1      i3wm.color1 #ff0000
+set_from_resource $color2      i3wm.color2 #ff0000
+set_from_resource $color3      i3wm.color3 #ff0000
+set_from_resource $color4      i3wm.color4 #ff0000
+set_from_resource $color5      i3wm.color5 #ff0000
+set_from_resource $color6      i3wm.color6 #ff0000
+set_from_resource $color7      i3wm.color7 #ff0000
+set_from_resource $color8      i3wm.color8 #ff0000
+set_from_resource $color9      i3wm.color9 #ff0000
+set_from_resource $color10      i3wm.color10 #ff0000
+set_from_resource $color11      i3wm.color11 #ff0000
+set_from_resource $color12      i3wm.color12 #ff0000
+set_from_resource $color13      i3wm.color13 #ff0000
+
+
+# Applying these colors to UI elements
+
+client.background $bg
+client.focused          $fg-alt $bg-alt     $color6  $fg-alt        $hl
+client.focused_inactive $bg     $bg-alt $fg  $bg            $bg
+client.unfocused        $bg     $bg-alt $fg  $bg            $bg
+client.urgent           $bg     $bg-alt $fg  $bg            $bg
+client.placeholder      $bg     $bg-alt $fg  $bg            $bg
+
+
+# Custom Keybinds
+# %%hotkey: French symbol selector%%
+bindsym $mod+f exec fish -c french
+# %%hotkey: French symbol selector%%
+bindsym $mod+Shift+m exec fish -c mathsymbols
+
+# %%hotkey: Open Terminal In Current Directory%%
+# bindsym $mod+Shift+Return exec urxvt -cd "`xcwd`" 
+bindsym $mod+Shift+Return exec alacritty --working-directory "`xcwd`" 
+
+###################
+# Startup commands#
+###################
+
+# Set monitor positios
+
+#reset colorscheme 
+exec_always wal -R
+
+#retrieve wallpaper
+exec ~/.fehbg  
+
+# Dunst notifications
+exec --no-startup-id dunst
+
+# Increase scroll speed
+exec xset r rate 300 50
+
+#remerge Xresources
+exec --no-startup-id xrdb /home/gideon/.Xresources
+
+# Strartup apps
+
+# automount usb
+exec --no-startup-id udiskie -t &
+
+# network applet
+exec --no-startup-id nm-applet &
+
+# clipboard daemon
+exec --no-startup-id greenclip daemon &
+
+# Transmission Daemon
+exec --no-startup-id transmission-daemon &
+
+# Bluetooth daemon
+exec --no-startup-id blueman-applet &
+
+#daemon for spotify
+# exec --no-startup-id spotifyd
+
+# Start nextcloud client
+# exec --no-startup-id i3-msg 'workspace 6: Projects ; exec nextcloud --style gtk2'
+exec --no-startup-id i3-msg 'workspace 6: ; exec nextcloud --style gtk2'
+
+# Start ckb next
+# exec --no-startup-id i3-msg 'workspace 6: Projects ; exec ckb-next --style gtk2'
+#exec --no-startup-id i3-msg 'workspace 6: ; exec ckb-next --style gtk2'
+
+# Start keepassxc
+# exec --no-startup-id i3-msg 'workspace 6: Projects ; exec keepassxc --style gtk2'
+# exec --no-startup-id i3-msg 'workspace 6: ; exec keepassxc'
+
+# Start KDE connect
+# exec --no-startup-id i3-msg 'workspace 6: Projects ; exec kdeconnect-settings --style gtk2'
+ # exec --no-startup-id i3-msg 'workspace 6: ; exec kdeconnect-settings --style gtk2'
+
+#firefox
+# exec --no-startup-id i3-msg 'workspace 4: Web ; exec /usr/bin/firefox'
+exec --no-startup-id i3-msg 'workspace 4: ; exec /usr/bin/firefox'
+
+
+# Music
+# exec i3-msg 'workspace 1: Music ; exec urxvt -e fish -c cava'
+# exec i3-msg 'workspace 1: Music ; exec urxvt -e fish -c cmus'
+ # exec i3-msg 'workspace 1: ; exec urxvt -e fish -c cava'
+ # exec i3-msg 'workspace 1: ; exec urxvt -e fish -c cmus'
+ #
+ # exec i3-msg 'workspace 1: ; exec alacritty -e fish -c cava'
+ # exec i3-msg 'workspace 1: ; exec alacritty -e fish -c cmus'
+
+# Communications
+# exec i3-msg 'workspace 9: ; exec urxvt -e fish -c weechat'
+# exec i3-msg 'workspace 9: ; exec urxvt -e fish -c neomutt'
+
+# Monitor
+# Restore layout to generate placeholder windows
+# exec --no-startup-id "i3-msg 'workspace 8: ; append_layout /home/gideon/.config/i3/layouts/monitor.json'"
+#
+# Spawn programs to get swallowed by placeholders
+# exec i3-msg 'exec urxvt -name cointop-startup -e fish -c cointop'
+# exec i3-msg 'exec alacritty --class cointop-startup -e fish -c cointop'
+# exec i3-msg 'exec alacritty --class gotop-startup -e fish -c gotop'
+# exec i3-msg 'exec alacritty --class mop-startup -e fish -c mop'
+# exec i3-msg 'exec alacritty --class newsboat-startup -e fish -c newsboat'
+
+# polybar
+# exec_alway urxvt -e fish -c 'cd ~/.config/polybar/ ; ./launch.sh'
+# exec_alway urxvt -e fish -c '$HOME/.config/polybar/scripts/launch.sh'
+# exec_always pkill -9 polybar
+exec_always ~/.config/polybar/scripts/launch.sh 
+
+# SCRATCHPADS
+# for urxvt, use following format:
+# exec_always urxvt -name translate -e fish -c 'trans -I'
+
+#math scratchpad
+exec_always alacritty --class math -e fish -c 'qalc'
+for_window [instance="math"] floating enable;
+for_window [instance="math"] move scratchpad; move position center;
+# %%hotkey: Calculator%%
+bindsym $mod+m [instance="math"] scratchpad show
+
+#translate scratchpad
+exec_always alacritty --class translate -e fish -c 'trans -I'
+for_window [instance="translate"] floating enable;
+for_window [instance="translate"] move scratchpad; move position center;
+# %%hotkey: Translator%%
+bindsym $mod+t [instance="translate"] scratchpad show
+
+#calendar scratchpad
+exec_always urxvt -name calendar -e fish -c 'ikhal'
+for_window [instance="calendar"] floating enable;
+for_window [instance="calendar"] move scratchpad; move position center;
+# %%hotkey: Calendar%%
+bindsym $mod+c [instance="calendar"] scratchpad show, resize set 1500 800
+
+# weather scratchpad
+# exec_always urxvt --name "weather" -e fish -c 'curl wttr.in/Bellingham'
+# exec_always urxvt -name weather -e fish -c 'doppler'
+# for_window [instance="weather"] floating enable;
+# for_window [instance="weather"] move scratchpad; move position center;
+# bindsym $mod+x [instance="weather"] scratchpad show, resize set 1500 800
+
+# weather test
+# exec_always nohup mpv  --stream-buffer-size=2m --loop-file=inf "https://radar.weather.gov/lite/N0R/ATX_loop.gif" 
+# exec_always urxvt -name "ATX_loop - terminal" -e fish -c 'echo Hello World'
+# for_window [class="mpv" title="ATX_loop.gif - mpv" ] move scratchpad, move position center  
+# for_window [class="urxvt" title="ATX_loop - terminal" ] move scratchpad, move position center  
+# bindsym $mod+x [class="mpv" title="ATX_loop.gif - mpv" ] scratchpad show, resize set 800 800
+# bindsym $mod+x [title="ATX_loop*" ] scratchpad show, resize set 800 800
+
+# Media player controls
+bindsym XF86AudioPlay exec cmus-remote -u 
+bindsym XF86AudioNext exec cmus-remote -n
+bindsym XF86AudioPrev exec cmus-remote -r
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Mod+Shift+(+/-) for keyboard without media controls
+# %%hotkey: Volume Up%%
+bindsym $mod+Shift+plus exec pactl set-sink-volume @DEFAULT_SINK@ +2%
+# %%hotkey: Volume Down%%
+bindsym $mod+Shift+minus exec pactl set-sink-volume @DEFAULT_SINK@ -2%
+
+# Default sink stops working when mic plugged in.
+# `pactl list sinks short` lists links. 2 is the speakers for now.
+
+# bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 2 +2%
+# bindsym XF86AudioLowerVolume exec pactl set-sink-volume 2 -2%
+# bindsym XF86AudioMute exec pactl set-sink-mute 2 toggle
+
+
+# Disables screen blanking
+exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset -dpms
+
+
+## Unused Keybinds:
+# $mod+q
+# $mod+Shift+w
+# $mod+Shift+t
+# $mod+Shift+y
+# $mod+y
+# $mod+u
+# $mod+Shift+u
+# $mod+i
+# $mod+Shift+i
+# $mod+o
+# $mod+Shift+o
+# $mod+Shift+p
+# $mod+Shift+a
+# $mod+Shift+s
+# $mod+Shift+d
+# $mod+g
+# $mod+Shift+g
+# $mod+z
+# $mod+Shift+z
+# $mod+Shift+x
+# $mod+Shift+v
+# $mod+Shift+b
+# $mod+n
+# $mod+Shift+n
+# $mod+braceright
+# $mod+Shift+braceright
+# $mod+braceleft
+# $mod+Shift+braceleft
+# $mod+bracketright
+# $mod+Shift+bracketright
+# $mod+bracketleft
+# $mod+Shift+bracketleft
+# another key: Control_L
+# another key: slash
