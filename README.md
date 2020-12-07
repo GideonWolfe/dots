@@ -75,7 +75,7 @@
 </p>
 </details>
 
-<details><summary>🐶 neomutt</summary>
+<details><summary>✉️ neomutt</summary>
 <p>
   <img src="screenshots/neomutt.png">
 
@@ -109,12 +109,12 @@
 </p>
 </details>
 
-<details><summary>💬 Weechat</summary>
+
+<details><summary>🗓️ Calendar</summary>
 <p>
-  <img src="screenshots/weechat.png">
+  <img src="screenshots/khal.png">
 </p>
 </details>
-
 
 
 
