@@ -32,6 +32,12 @@ Custom `vi` mode indicators in the fish shell!
 
 `cava` (top left) and various `glava` shaders.
 
+### Weechat
+
+![](screenshots/weechat.png)
+
+
+
 ## System
 
 - [i3-gaps](https://github.com/Airblader/i3): Tiling window manager
