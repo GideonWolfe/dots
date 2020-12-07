@@ -1,0 +1,14 @@
+# Show comments at right of disassembly if they fit in screen
+e asm.cmtright=true
+
+# Shows pseudocode in disassembly. Eg mov eax, str.ok = > eax = str.ok
+e asm.pseudo = true
+
+# Sets disassembly syntax to AT&T
+e asm.syntax = att
+
+# Use UTF-8 to show cool arrows that do not look like crap :)
+e scr.utf8 = true
+
+# Set the colorscheme to terminal colors
+e scr.color=1
