@@ -135,7 +135,7 @@
 </p>
 </details>
 
-<details><summary> 📈 matplotlib</summary>
+<details><summary>📈 matplotlib</summary>
 <p>
   <img src="screenshots/matplotlib.png">
 </p>
