@@ -1,0 +1,330 @@
+/* Import the CSS file.
+Change 'ecly' to your username. */
+@import url('file:///home/gideon/.cache/wal/colors.css');
+@namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+:root {
+    --foreground-alt: var(--color2);
+    --foreground-alt-alt: var(--color4);
+    --font: 'Iosevka';
+}
+
+#TabsToolbar .tabbrowser-tab .tab-line[selected="true"] {
+    background-color: var(--foreground-alt) !important;
+}
+
+
+/* --- General coloring of header panel --- */
+/* text area coloring */
+textarea, input, select {
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
+    -moz-appearance: none !important;
+    border-color: var(--background) !important;
+    font-family: var(--font) !important;
+}
+
+/* url container color */
+#urlbar {
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
+}
+
+/* Color for firefox panel (tabs background and background behind url bar) */
+menubar, toolbar, nav-bar, #TabsToolbar > *{
+    font-family: var(--font) !important;
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
+}
+
+/* active tab coloring */
+.tabbrowser-tab[selected="true"] {
+    font-weight: bold !important;
+    color: var(--foreground-alt) !important;
+    background-color: var(--background) !important;
+}
+
+/* Back button coloring color */
+#back-button:not([disabled="true"]):not([open="true"]):not(:active) .toolbarbutton-icon {
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
+}
+
+/* --- Customize the context menu --- */
+/* Remove all silly margins and set color/font everywhere */
+#contentAreaContextMenu *, #placesContext *, .textbox-contextmenu *, #tabContextMenu *, #toolbar-context-menu *{
+    -moz-appearance: none !important;
+    background-color: var(--background) !important;
+    font-family: var(--font) !important;
+    margin-left: 0px !important;
+    color: var(--foreground) !important;
+}
+
+/* Specs for submenus */
+menu {
+    -moz-appearance: none !important;
+    font-family: var(--font) !important;
+    color: var(--foreground-alt-alt) !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-bottom: 2px !important;
+    padding-top: 2px !important;
+    border-bottom-style:solid !important;
+    border-bottom-width:1px !important;
+    border-color: var(--foreground-alt) !important;
+}
+
+/* General menu item specs */
+menuitem {
+    -moz-appearance: none !important;
+    font-family: var(--font) !important;
+    color: var(--foreground) !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-bottom: 2px !important;
+    padding-top: 2px !important;
+    border-bottom-style:solid !important;
+    border-bottom-width:1px !important;
+    border-color: var(--foreground-alt) !important;
+}
+
+/* Fixes silly hovers for context menu items */
+menuitem:focus, menu:focus,#PlacesToolbarItems > toolbarbutton:hover {
+    -moz-appearance: none !important;
+    font-weight:bold !important;
+}
+
+#contentAreaContextMenu *, #placesContext *, .textbox-contextmenu *, #tabContextMenu *, #toolbar-context-menu *{
+    -moz-appearance: none !important;
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
+    font-family: var(--font) !important;
+    margin-left: 0px !important;
+}
+
+/* Disable some context menu buttons */
+#context-back,
+#context-forward,
+#context-reload,
+#context-stop,
+#context-bookmarkpage
+{display:none !important; }
+
+/* This affects eg. dropdowns from bookmarks folders, and context menus */
+menuitem > * {
+    color: var(--foreground) !important;
+    background-color: var(--background) !important;
+}
+
+/* Hide icons in for booksmarks and a little side container */
+menuitem image, .menu-accel-container{
+    display: none !important;
+}
+
+/* --- Customize tabs--- */
+.tab-background-start[selected=true]::after,
+.tab-background-start[selected=true]::before,
+.tab-background-start,
+.tab-background-end,
+.tab-background-end[selected=true]::after,
+.tab-background-end[selected=true]::before,
+.tabbrowser-tabs {
+    /* Force that these items do not have a minimum height. This is * especially needed for supporting TabMix Plus. */
+    min-height: 0px !important;
+
+    /* Make sure that the text is correctly aligned. */
+    -moz-box-align: center !important;
+    -moz-appearance: none !important;
+}
+
+/* tabs coloring */
+.tabbrowser-tab .tab-label {
+    font-family: var(--font) !important;
+    color: var(--foreground) !important;
+    background-color: var(--background) !important;
+}
+
+/* active tab coloring */
+.tabbrowser-tab[selected="true"], .tab-text.tab-label[selected="true"]{
+    font-weight: bold !important;
+    color: var(--foreground-alt-alt) !important;
+    background-color: var(--background) !important;
+}
+
+/* hovering tabs */
+.tabbrowser-tab:hover{
+    background-color: var(--background) !important;
+    font-weight: bold !important;
+    -moz-appearance: none !important;
+}
+
+/* Tabs: no icons */
+.tabbrowser-tabs .tab-icon-image { display: none !important; }
+
+/* Needed to make sure that the tab bar will not grow by one pixel
+ * if it overflows. */
+#TabsToolbar > #alltabs-button,
+#TabsToolbar > #new-tab-button,
+#tabbrowser-tabs > .tabbrowser-arrowscrollbox > * {
+    margin-bottom: 0px !important;
+}
+
+/* This is the box at the left and right of the tabs. */
+#tabbrowser-tabs > .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
+    -moz-padding-end: 0px !important;
+    -moz-padding-start: 0px !important;
+}
+
+/* The image of the tabs. */
+.tab-throbber,
+.tab-icon-image {
+    display: none !important;
+}
+
+/* The image of not pinned (normal) tabs. */
+.tab-throbber:not([pinned]),
+.tab-icon-image:not([pinned]) {
+    -moz-margin-end: 0px !important;
+}
+
+/* The contents of the tabs. */
+.tab-content:not([pinned]) {
+}
+
+/* The label which holds the site name. */
+.tab-text.tab-label:not([pinned]) {
+}
+
+/* The close button of the tab. */
+.tab-close-button:not([pinned]) {
+    -moz-margin-start: 0px !important;
+}
+
+/* --- Bookmarks customization --- */
+#PlacesToolbarItems > .bookmark-item {
+    min-height: 0px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+}
+
+/* In bookmark submenus this will be the color of folders */
+.menu-iconic.bookmark-item.subviewbutton{
+    color: var(--foreground-alt) !important;
+}
+
+/* The bookmarks panel when pressing the 'bookmarks button' */
+#bookmarksPanel, #historyPanel {
+    font-weight: bold !important;
+    color: var(--foreground-alt) !important;
+    background-image: var(--background) !important;
+    background-color: var(--background) !important;
+
+}
+
+/* Toolbar */
+#PersonalToolbar > * {
+    /* Make sure that all items in the toolbar can become smaller. */
+    min-height: 0px !important;
+}
+
+/* Bookmarks Toolbar: no icons */
+#personal-bookmarks .toolbarbutton-icon, .menu-iconic-left, .openintabs-menuitem {
+    display: none !important;
+}
+
+/* Bookmark items */
+.menuitem-iconic.bookmark-item.menuitem-with-favicon{
+    -moz-appearance: none !important;
+    font-family: var(--font) !important;
+    color: var(--foreground) !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-bottom: 2px !important;
+    padding-top: 2px !important;
+    border-bottom-style:solid !important;
+    border-bottom-width:1px !important;
+    border-color: var(--foreground-alt)
+}
+
+/* Bookmark items hover */
+.menuitem-iconic.bookmark-item.menuitem-with-favicon:hover{
+    -moz-appearance: none !important;
+    font-weight: bold !important;
+    background-color: var(--background) !important;
+}
+
+/* Removes all the excess padding of the container of dropdown bookmarks */
+.box-inherit.scrollbox-innerbox{
+    background-color: var(--background) !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    border: none !important;
+}
+#contentAreaContextMenu
+#placesContext.menuitem {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+/* --- Autocomplete dropdown --- */
+.autocomplete-richlistitem {
+    font-family: var(--font) !important;
+    color: var(--foreground) !important;
+    background-color: var(--background) !important;
+}
+
+/* selected item using arrow keys */
+.autocomplete-richlistitem[selected],
+treechildren.searchbar-treebody::-moz-tree-row(selected) {
+  background-color: var(--foreground-alt-alt) !important;
+}
+
+/* hover effect */
+.autocomplete-richlistitem:hover{
+    font-weight: bold !important;
+}
+
+/* the bow surrounding the items */
+.autocomplete-richlistbox {
+    background-color: var(--background) !important;
+    margin: 0px !important;
+}
+/*
+.autocomplete-richlistitem:focused{
+    font-weight:bold !important;
+}*/
+
+/* urls in autocomplete dropdopwn */
+.ac-url-text, .ac-action-text {
+    font-family: var(--font) !important;
+    color: var(--foreground-alt) !important;
+}
+
+
+/* separator between item and url for autocomplete */
+.ac-separator-text{
+    font-family: var(--font) !important;
+    color: var(--foreground-alt-alt) !important;
+}
+
+/* Hide the bottom two bars of autocomplete and bookmark indicator */
+.search-panel-one-offs, .search-one-offs, .ac-type-icon {
+    display: none !important;
+}
+
+#statusbar-display[label^="Looking"] {display:none !important;}
+#statusbar-display[label^="Connect"] {display:none !important;}
+#statusbar-display[label^="Waiting"] {display:none !important;}
+#statusbar-display[label^="Transfer"] {display:none !important;}
+
+/* Change the wite flash of page load to background color*/
+.browserContainer { background-color: var(--background) !important; }
+
+/* userChrome.js binding
+Original method of binding an external XML file broke in Firefox 68.
+This embedded data URI method will stop working in Firefox 72. No solution after that, as far as I'm aware.
+*/
+toolbarbutton#forward-button {
+-moz-binding: url(data:text/plain;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+DQo8IS0tIENvcHlyaWdodCAoYykgMjAxNyBIYWdnYWkgTnVjaGkNCkF2YWlsYWJsZSBmb3IgdXNlIHVuZGVyIHRoZSBNSVQgTGljZW5zZToNCmh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUDQogLS0+DQoNCjwhLS0gUnVuIHVzZXJDaHJvbWUuanMvdXNlckNocm9tZS54dWwgYW5kIC51Yy5qcy8udWMueHVsLy5jc3MgZmlsZXMgIC0tPg0KPGJpbmRpbmdzIHhtbG5zPSJodHRwOi8vd3d3Lm1vemlsbGEub3JnL3hibCI+DQogICAgPGJpbmRpbmcgaWQ9ImpzIj4NCiAgICAgICAgPGltcGxlbWVudGF0aW9uPg0KICAgICAgICAgICAgPGNvbnN0cnVjdG9yPjwhW0NEQVRBWw0KICAgICAgICAgICAgICAgIGlmKHdpbmRvdy51c2VyQ2hyb21lSnNNb2QpIHJldHVybjsNCiAgICAgICAgICAgICAgICB3aW5kb3cudXNlckNocm9tZUpzTW9kID0gdHJ1ZTsNCg0KICAgICAgICAgICAgICAgIHZhciBjaHJvbWVGaWxlcyA9IEZpbGVVdGlscy5nZXREaXIoIlVDaHJtIiwgW10pLmRpcmVjdG9yeUVudHJpZXM7DQogICAgICAgICAgICAgICAgdmFyIHh1bEZpbGVzID0gW107DQogICAgICAgICAgICAgICAgdmFyIHNzcyA9IENjWydAbW96aWxsYS5vcmcvY29udGVudC9zdHlsZS1zaGVldC1zZXJ2aWNlOzEnXS5nZXRTZXJ2aWNlKENpLm5zSVN0eWxlU2hlZXRTZXJ2aWNlKTsNCg0KICAgICAgICAgICAgICAgIHdoaWxlKGNocm9tZUZpbGVzLmhhc01vcmVFbGVtZW50cygpKSB7DQogICAgICAgICAgICAgICAgICAgIHZhciBmaWxlID0gY2hyb21lRmlsZXMuZ2V0TmV4dCgpLlF1ZXJ5SW50ZXJmYWNlKENpLm5zSUZpbGUpOw0KICAgICAgICAgICAgICAgICAgICB2YXIgZmlsZVVSSSA9IFNlcnZpY2VzLmlvLm5ld0ZpbGVVUkkoZmlsZSk7DQoNCiAgICAgICAgICAgICAgICAgICAgaWYoZmlsZS5pc0ZpbGUoKSkgew0KICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJub25lIjsNCiAgICAgICAgICAgICAgICAgICAgICAgIGlmKC8oXnVzZXJDaHJvbWV8LnVjKS5qcyQvaS50ZXN0KGZpbGUubGVhZk5hbWUpKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJ1c2VyY2hyb21lL2pzIjsNCiAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgaWYoLyhedXNlckNocm9tZXwudWMpLnh1bCQvaS50ZXN0KGZpbGUubGVhZk5hbWUpKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJ1c2VyY2hyb21lL3h1bCI7DQogICAgICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgICAgICBlbHNlIGlmKC8uYXMuY3NzJC9pLnRlc3QoZmlsZS5sZWFmTmFtZSkpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlID0gImFnZW50c2hlZXQiOw0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgZWxzZSBpZigvXig/ISh1c2VyQ2hyb21lfHVzZXJDb250ZW50KS5jc3MkKS4rLmNzcyQvaS50ZXN0KGZpbGUubGVhZk5hbWUpKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJ1c2Vyc2hlZXQiOw0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgaWYodHlwZSAhPSAibm9uZSIpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zb2xlLmxvZygiLS0tLS0tLS0tLVwgIiArIGZpbGUubGVhZk5hbWUgKyAiICgiICsgdHlwZSArICIpIik7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdHJ5IHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYodHlwZSA9PSAidXNlcmNocm9tZS9qcyIpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNlcnZpY2VzLnNjcmlwdGxvYWRlci5sb2FkU3ViU2NyaXB0V2l0aE9wdGlvbnMoZmlsZVVSSS5zcGVjLCB7dGFyZ2V0OiB3aW5kb3csIGlnbm9yZUNhY2hlOiB0cnVlfSk7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZWxzZSBpZih0eXBlID09ICJ1c2VyY2hyb21lL3h1bCIpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHh1bEZpbGVzLnB1c2goZmlsZVVSSS5zcGVjKTsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbHNlIGlmKHR5cGUgPT0gImFnZW50c2hlZXQiKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZighc3NzLnNoZWV0UmVnaXN0ZXJlZChmaWxlVVJJLCBzc3MuQUdFTlRfU0hFRVQpKQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNzcy5sb2FkQW5kUmVnaXN0ZXJTaGVldChmaWxlVVJJLCBzc3MuQUdFTlRfU0hFRVQpOw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgaWYodHlwZSA9PSAidXNlcnNoZWV0Iikgew0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYoIXNzcy5zaGVldFJlZ2lzdGVyZWQoZmlsZVVSSSwgc3NzLlVTRVJfU0hFRVQpKQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNzcy5sb2FkQW5kUmVnaXN0ZXJTaGVldChmaWxlVVJJLCBzc3MuVVNFUl9TSEVFVCk7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9IGNhdGNoKGUpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY29uc29sZS5sb2coIiMjIyMjIyMjIyMgRVJST1I6ICIgKyBlICsgIiBhdCAiICsgZS5saW5lTnVtYmVyICsgIjoiICsgZS5jb2x1bW5OdW1iZXIpOw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zb2xlLmxvZygiLS0tLS0tLS0tLS8gIiArIGZpbGUubGVhZk5hbWUpOw0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgfQ0KDQogICAgICAgICAgICAgICAgc2V0VGltZW91dChmdW5jdGlvbiBsb2FkWFVMKCkgew0KICAgICAgICAgICAgICAgICAgICBpZih4dWxGaWxlcy5sZW5ndGggPiAwKSB7DQogICAgICAgICAgICAgICAgICAgICAgICBkb2N1bWVudC5sb2FkT3ZlcmxheSh4dWxGaWxlcy5zaGlmdCgpLCBudWxsKTsNCiAgICAgICAgICAgICAgICAgICAgICAgIHNldFRpbWVvdXQobG9hZFhVTCwgNSk7DQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICB9LCAwKTsNCiAgICAgICAgICAgIF1dPjwvY29uc3RydWN0b3I+DQogICAgICAgIDwvaW1wbGVtZW50YXRpb24+DQogICAgPC9iaW5kaW5nPg0KPC9iaW5kaW5ncz4=);
+}
+
