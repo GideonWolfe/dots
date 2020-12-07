@@ -206,16 +206,13 @@
 
 ## Entertainment
 
-<details><summary>✨ Visualizers</summary>
-<p>
-  <img src="screenshots/visualizers.png">
 
-  `cava` (top left) and various `glava` shaders.
+<details><summary>📰 News</summary>
+<p>
+  <img src="screenshots/newsboat.png">
+
 </p>
 </details>
-
-
-
 
 <details><summary>🎵 Spotify</summary>
 <p>
@@ -233,6 +230,13 @@
 </p>
 </details>
 
+<details><summary>✨ Visualizers</summary>
+<p>
+  <img src="screenshots/visualizers.png">
+
+  `cava` (top left) and various `glava` shaders.
+</p>
+</details>
 
 # Applications
 
