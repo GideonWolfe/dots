@@ -52,13 +52,13 @@
 </details>
 
 
-<details><summary>Weechat</summary>
+<details><summary>💬 Weechat</summary>
 <p>
   <img src="screenshots/weechat.png">
 </p>
 </details>
 
-<details><summary> 🎵 Spotify</summary>
+<details><summary>🎵 Spotify</summary>
 <p>
   <img src="screenshots/spotify.png">
 
@@ -66,7 +66,7 @@
 </p>
 </details>
 
-<details><summary>🎶cmus</summary>
+<details><summary>🎶 cmus</summary>
 <p>
   <img src="screenshots/cmus.png">
 
