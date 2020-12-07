@@ -76,6 +76,7 @@
 
 <details><summary>polybar</summary>
 <p>
+
   `polybar` modules for each monitor.
 
   <img src="screenshots/polybar-left.png">
@@ -89,6 +90,7 @@
   <img src="screenshots/polybar-right.png">
 
   Download, `picom` toggle, `KDE-Connect` module, system tray
+
 </p>
 </details>
 
