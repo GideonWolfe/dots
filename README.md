@@ -7,6 +7,11 @@
   <img src="screenshots/vimode.png">
 
   Custom `vi` mode indicators in the fish shell!
+
+  <img src="screenshots/fishprompt.png">
+
+  Condensed `cwd` and `git` status in prompt
+
 </p>
 </details>
 
