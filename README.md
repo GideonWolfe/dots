@@ -43,23 +43,35 @@
 </p>
 </details>
 
+<details><summary>xmenu</summary>
+<p>
+  <img src="screenshots/xmenu.png">
+
+  `xmenu` for drop down application/script launching
+</p>
+</details>
 
 
-### Weechat
+<details><summary>Weechat</summary>
+<p>
+  <img src="screenshots/weechat.png">
+</p>
+</details>
 
-![](screenshots/weechat.png)
+<details><summary>Spotify</summary>
+<p>
+  <img src="screenshots/spotify.png">
+  Spotify with `spicetify` theme
+</p>
+</details>
 
-### Spotify
+<details><summary>cmus</summary>
+<p>
+  <img src="screenshots/cmus.png">
+  `cmus` + `cava`, a classic combo
+</p>
+</details>
 
-![](screenshots/spotify.png)
-
-Spotify with `spicetify` theme
-
-### cmus
-
-![](screenshots/cmus.png)
-
-`cmus` + `cava`, a classic combo
 
 ## System
 
