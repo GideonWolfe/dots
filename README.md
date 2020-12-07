@@ -7,6 +7,8 @@
 
 Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage with [startTree](https://github.com/Paul-Houser/StartTree), custom `userChrome.css`
 
+### neomutt
+
 ![](screenshots/neomutt.png)
 
 `neomutt` is looking good, might as well showcase some classic spam... 
