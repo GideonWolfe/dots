@@ -1,5 +1,7 @@
 # Gallery
 
+## Web
+
 <details><summary>🦊 Firefox</summary>
 <p>
   <img src="screenshots/firefox.png">
@@ -7,6 +9,11 @@
   Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage with [startTree](https://github.com/Paul-Houser/StartTree), custom `userChrome.css`
 </p>
 </details>
+
+## Communication
+
+## Development
+
 
 <details><summary>🐶 neomutt</summary>
 <p>
