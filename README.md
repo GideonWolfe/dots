@@ -20,7 +20,7 @@
 
 <details><summary>🔔 dunst</summary>
 <p>
-  <img src="screenshots/notifications.png.gif">
+  <img src="screenshots/notifications.png">
 
   A few examples of `dunst` notifications
 </p>
