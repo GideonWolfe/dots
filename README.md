@@ -1,83 +1,12 @@
 # Gallery
 
-## Web
-
-<details><summary>🦊 Firefox</summary>
-<p>
-  <img src="screenshots/firefox.png">
-
-  Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage with [startTree](https://github.com/Paul-Houser/StartTree), custom `userChrome.css`
-</p>
-</details>
-
-## Communication
-
-## Development
-
-
-<details><summary>🐶 neomutt</summary>
-<p>
-  <img src="screenshots/neomutt.png">
-
-  `neomutt` is looking good, might as well showcase some classic spam... 
-</p>
-</details>
-
-
-<details><summary>🌀 Discord</summary>
-<p>
-  <img src="screenshots/discord.png">
-
-  Ummm... Completely stock Discord client... Nothing to see here Officer.
-</p>
-</details>
-
+## System
 
 <details><summary>🐟 Fish</summary>
 <p>
   <img src="screenshots/vimode.png">
 
   Custom `vi` mode indicators in the fish shell!
-</p>
-</details>
-
-
-<details><summary>✨ Visualizers</summary>
-<p>
-  <img src="screenshots/visualizers.png">
-
-  `cava` (top left) and various `glava` shaders.
-</p>
-</details>
-
-<details><summary>✖️ xmenu</summary>
-<p>
-  <img src="screenshots/xmenu.png">
-
-  `xmenu` for drop down application/script launching
-</p>
-</details>
-
-
-<details><summary>💬 Weechat</summary>
-<p>
-  <img src="screenshots/weechat.png">
-</p>
-</details>
-
-<details><summary>🎵 Spotify</summary>
-<p>
-  <img src="screenshots/spotify.png">
-
-  Spotify with `spicetify` theme
-</p>
-</details>
-
-<details><summary>🎶 cmus</summary>
-<p>
-  <img src="screenshots/cmus.png">
-
-  `cmus` + `cava`, a classic combo
 </p>
 </details>
 
@@ -117,6 +46,84 @@
   `rofi` with custom theme
 </p>
 </details>
+
+## Web
+
+<details><summary>🦊 Firefox</summary>
+<p>
+  <img src="screenshots/firefox.png">
+
+  Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage with [startTree](https://github.com/Paul-Houser/StartTree), custom `userChrome.css`
+</p>
+</details>
+
+## Communication
+
+<details><summary>🌀 Discord</summary>
+<p>
+  <img src="screenshots/discord.png">
+
+  Ummm... Completely stock Discord client... Nothing to see here Officer.
+</p>
+</details>
+
+<details><summary>🐶 neomutt</summary>
+<p>
+  <img src="screenshots/neomutt.png">
+
+  `neomutt` is looking good, might as well showcase some classic spam... 
+</p>
+</details>
+
+<details><summary>💬 Weechat</summary>
+<p>
+  <img src="screenshots/weechat.png">
+</p>
+</details>
+
+## Development
+
+
+
+
+
+
+
+
+<details><summary>✨ Visualizers</summary>
+<p>
+  <img src="screenshots/visualizers.png">
+
+  `cava` (top left) and various `glava` shaders.
+</p>
+</details>
+
+<details><summary>✖️ xmenu</summary>
+<p>
+  <img src="screenshots/xmenu.png">
+
+  `xmenu` for drop down application/script launching
+</p>
+</details>
+
+
+
+<details><summary>🎵 Spotify</summary>
+<p>
+  <img src="screenshots/spotify.png">
+
+  Spotify with `spicetify` theme
+</p>
+</details>
+
+<details><summary>🎶 cmus</summary>
+<p>
+  <img src="screenshots/cmus.png">
+
+  `cmus` + `cava`, a classic combo
+</p>
+</details>
+
 
 # Applications
 
