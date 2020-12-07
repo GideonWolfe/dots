@@ -43,7 +43,7 @@
 </p>
 </details>
 
-<details><summary>xmenu</summary>
+<details><summary>✖️ xmenu</summary>
 <p>
   <img src="screenshots/xmenu.png">
 
@@ -74,7 +74,7 @@
 </p>
 </details>
 
-<details><summary>polybar</summary>
+<details><summary>🔮 polybar</summary>
 <p>
 
   `polybar` modules for each monitor.
