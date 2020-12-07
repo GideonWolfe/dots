@@ -238,6 +238,14 @@
 </p>
 </details>
 
+<details><summary>🎁 Misc</summary>
+<p>
+  <img src="screenshots/misc.png">
+
+  `asciiquarium`, `unimatrix`, `pipes.sh`
+</p>
+</details>
+
 # Applications
 
 ## System
