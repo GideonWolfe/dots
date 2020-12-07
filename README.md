@@ -1,0 +1,2 @@
+# dots
+🌀 my linux configuration
