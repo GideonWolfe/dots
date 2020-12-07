@@ -61,6 +61,7 @@
 <details><summary>Spotify</summary>
 <p>
   <img src="screenshots/spotify.png">
+
   Spotify with `spicetify` theme
 </p>
 </details>
