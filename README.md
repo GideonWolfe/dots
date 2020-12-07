@@ -169,6 +169,14 @@
 </p>
 </details>
 
+<details><summary>🗓️  Habits</summary>
+<p>
+  <img src="screenshots/dijo.png">
+
+  Imagine what this would look like if I was good at tracking these...
+</p>
+</details>
+
 <details><summary>🗒️  Scratchpad</summary>
 <p>
   <img src="screenshots/scratchpad.png">
