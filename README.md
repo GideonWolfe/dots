@@ -1,6 +1,16 @@
 # dots
 🌀 my linux configuration
 
+<details><summary><code>Firefox</code> 🦊</summary>
+<p>
+  
+![](screenshots/firefox.png)
+
+Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage with [startTree](https://github.com/Paul-Houser/StartTree), custom `userChrome.css`
+
+</p>
+</details>
+
 ### Firefox
 
 ![](screenshots/firefox.png)
