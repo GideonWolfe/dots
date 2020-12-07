@@ -130,6 +130,17 @@
 </p>
 </details>
 
+<details><summary>📝 Notes</summary>
+<p>
+  <img src="screenshots/markdown1.png">
+  <img src="screenshots/markdown2.png">
+
+  Math equations, UML diagrams, and much more.
+  All accessible through `neovim`.
+
+</p>
+</details>
+
 ## Utility
 
 <details><summary>📊 Monitors</summary>
