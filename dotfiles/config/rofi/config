@@ -1,0 +1,3 @@
+rofi.theme: ~/.cache/wal/custom-rofi.rasi
+rofi.font: hack nerd font 15
+rofi.modi: window,run,ssh,emoji
