@@ -195,6 +195,15 @@
 </p>
 </details>
 
+
+<details><summary>🔊 Volume</summary>
+<p>
+  <img src="screenshots/pavucontrol.png">
+
+  Like most GTK+ apps, `pavucontrol` takes a great theme.
+</p>
+</details>
+
 ## Entertainment
 
 <details><summary>✨ Visualizers</summary>
