@@ -69,6 +69,7 @@
 <details><summary>cmus</summary>
 <p>
   <img src="screenshots/cmus.png">
+
   `cmus` + `cava`, a classic combo
 </p>
 </details>
@@ -76,11 +77,17 @@
 <details><summary>polybar</summary>
 <p>
   `polybar` modules for each monitor.
+
   <img src="screenshots/polybar-left.png">
+
   `dunst` and `picom` toggles
+
   <img src="screenshots/polybar-center.png">
+
   Date and cpu usage
+
   <img src="screenshots/polybar-right.png">
+
   Download, `picom` toggle, `KDE-Connect` module, system tray
 </p>
 </details>
