@@ -84,6 +84,21 @@
 ## Development
 
 
+## Utility
+
+<details><summary>📊 Monitors</summary>
+<p>
+  <img src="screenshots/monitors.png">
+
+  `bashtop` with custom theme, also showcasing `gotop` and `s-tui`.
+</p>
+</details>
+
+<details><summary>💬 Weechat</summary>
+<p>
+  <img src="screenshots/weechat.png">
+</p>
+</details>
 
 
 
