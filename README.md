@@ -2,7 +2,7 @@
 
 <details><summary><code>Firefox</code> 🦊</summary>
 <p>
-  ![](screenshots/firefox.png)
+  <img src="screenshots/firefox.png">
 
   Pallete changed with [Pywalfox](https://github.com/Frewacom/pywalfox), startpage with [startTree](https://github.com/Paul-Houser/StartTree), custom `userChrome.css`
 </p>
@@ -10,7 +10,7 @@
 
 <details><summary><code>neomutt</code> 🐶</summary>
 <p>
-  ![](screenshots/neomutt.png)
+  <img src="screenshots/neomutt.png">
 
   `neomutt` is looking good, might as well showcase some classic spam... 
 </p>
