@@ -55,6 +55,14 @@
 </p>
 </details>
 
+<details><summary>✖️ xmenu</summary>
+<p>
+  <img src="screenshots/xmenu.png">
+
+  `xmenu` for drop down application/script launching
+</p>
+</details>
+
 ## Web
 
 <details><summary>🦊 Firefox</summary>
@@ -117,8 +125,7 @@
 </details>
 
 
-
-
+## Entertainment
 
 <details><summary>✨ Visualizers</summary>
 <p>
@@ -128,13 +135,6 @@
 </p>
 </details>
 
-<details><summary>✖️ xmenu</summary>
-<p>
-  <img src="screenshots/xmenu.png">
-
-  `xmenu` for drop down application/script launching
-</p>
-</details>
 
 
 
