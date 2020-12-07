@@ -187,6 +187,14 @@
 </details>
 
 
+<details><summary>📜 Files</summary>
+<p>
+  <img src="screenshots/files.png">
+
+  `ranger` and `nautilus`
+</p>
+</details>
+
 ## Entertainment
 
 <details><summary>✨ Visualizers</summary>
