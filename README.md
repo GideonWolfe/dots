@@ -10,6 +10,14 @@
 </p>
 </details>
 
+<details><summary>🦎 Chameleon</summary>
+<p>
+  <img src="screenshots/chameleon.gif">
+
+  Completely change theme with one script
+</p>
+</details>
+
 <details><summary>🔮 polybar</summary>
 <p>
 
@@ -83,6 +91,13 @@
 
 ## Development
 
+<details><summary>🔥 neovim</summary>
+<p>
+  <img src="screenshots/nvim.png">
+
+  [vim.reaper](https://github.com/GideonWolfe/vim.reaper), my custom `neovim` configuration. See the page for many more screenshots
+</p>
+</details>
 
 ## Utility
 
