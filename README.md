@@ -115,6 +115,14 @@
 </p>
 </details>
 
+<details><summary>📉 gnuplot</summary>
+<p>
+  <img src="screenshots/gnuplot.png">
+
+  Using my `Gnuplot-Pywal` tool
+</p>
+</details>
+
 ## Utility
 
 <details><summary>📊 Monitors</summary>
