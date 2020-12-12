@@ -1,0 +1,378 @@
+;     ____        __      __                  ______            _____      
+;    / __ \____  / /_  __/ /_  ____ ______   / ____/___  ____  / __(_)___ _
+;   / /_/ / __ \/ / / / / __ \/ __ `/ ___/  / /   / __ \/ __ \/ /_/ / __ `/
+;  / ____/ /_/ / / /_/ / /_/ / /_/ / /     / /___/ /_/ / / / / __/ / /_/ / 
+; /_/    \____/_/\__, /_.___/\__,_/_/      \____/\____/_/ /_/_/ /_/\__, /  
+;               /____/                                            /____/   
+
+
+[colors]
+background = ${xrdb:color0:#222}
+background-alt = ${xrdb:color3:#222}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color2:#555}
+highlight = ${xrdb:color2:#f00}
+urgent = #f00
+color0 = ${xrdb:color0:#222}
+color1 = ${xrdb:color1:#222}
+color3 = ${xrdb:color3:#222}
+color4 = ${xrdb:color4:#222}
+color5 = ${xrdb:color5:#222}
+color6 = ${xrdb:color6:#222}
+color7 = ${xrdb:color7:#222}
+color8 = ${xrdb:color8:#222}
+color9 = ${xrdb:color9:#222}
+color10 = ${xrdb:color10:#222}
+color11 = ${xrdb:color11:#222}
+color12 = ${xrdb:color12:#222}
+
+[settings]
+screenchange-reload = true
+
+
+[global/wm]
+margin-top = 3
+margin-bottom = 3
+include-directory = "/home/gideon/dotfiles/dotfiles/config/polybar/modules/"
+
+
+;     __  ___          __      __         
+;    /  |/  /___  ____/ /_  __/ /__  _____
+;   / /|_/ / __ \/ __  / / / / / _ \/ ___/
+;  / /  / / /_/ / /_/ / /_/ / /  __(__  ) 
+; /_/  /_/\____/\__,_/\__,_/_/\___/____/  
+
+; blur-toggle: Switch to toggle blur
+; include-file = /home/gideon/dotfiles/dotfiles/config/polybar/modules/blurtoggle.ini
+
+; CONTINUE WHEN include-directory is added
+[module/networkspeeddown]
+;https://github.com/jaagr/polybar/wiki/Module:-network
+; type = internal/network
+; interface = wlp40s0
+; label-connected = "%downspeed:7%"
+; format-connected = <label-connected>
+; format-connected-prefix = ""
+; format-connected-prefix-foreground = ${colors.foreground-alt}
+; format-connected-foreground = ${colors.foreground}
+; format-connected-background = ${colors.background}
+;format-connected-underline = #62FF00
+
+[module/xmenu-left]
+type = custom/script
+click-left = /home/gideon/.config/polybar/scripts/xmenu-polybar.sh 1
+click-right = /home/gideon/.config/polybar/scripts/xmenu-polybar.sh 1
+exec = "/home/gideon/.config/polybar/scripts/xmenu-button.sh"
+format-foreground = ${colors.color4}
+tail = true
+interval = 90
+
+[module/xmenu-middle]
+type = custom/script
+click-left = /home/gideon/.config/polybar/scripts/xmenu-polybar.sh 0
+click-right = /home/gideon/.config/polybar/scripts/xmenu-polybar.sh 0
+exec = /home/gideon/.config/polybar/scripts/xmenu-button.sh
+format-foreground = ${colors.color4}
+tail = true
+interval = 90
+
+[module/xmenu-right]
+type = custom/script
+click-left = /home/gideon/.config/polybar/scripts/xmenu-polybar.sh 2
+click-right = /home/gideon/.config/polybar/scripts/xmenu-polybar.sh 2
+exec = /home/gideon/.config/polybar/scripts/xmenu-button.sh
+format-foreground = ${colors.color4}
+tail = true
+interval = 90
+
+[module/dunst]
+type = custom/ipc
+initial = 1
+hook-0 = echo "%{A1:notify-send "DUNST_COMMAND_PAUSE" && polybar-msg hook dunst 2:}%{A}"
+hook-1 = echo "%{A1:notify-send "DUNST_COMMAND_RESUME" && polybar-msg hook dunst 1:}%{A}"
+;format-prefix-foreground = ${colors.foreground-alt}
+;format-prefix-foreground = color2
+format-foreground = ${colors.color4}
+
+[module/cmus-status]
+type = custom/script  
+exec = "cmus-status-line"  
+click-left = cmus-remote -n
+click-right = cmus-remote -r
+click-middle = cmus-remote -u
+interval = 1
+
+
+[module/kdeconnect]
+type = custom/script  
+exec = "~/.config/polybar/scripts/polybar-kdeconnect.sh -d"  
+tail = true
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = "| "
+format-suffix = " |"
+format = <label>
+exec = python /home/gideon/.config/polybar/scripts/spotify.py -f '{artist}: {song}'
+click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+click-right = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+click-middle = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause 
+
+[module/player-cmus]
+type = custom/script
+exec = ~/.config/polybar/scripts/player-cmus.sh
+interval = 1
+click-left = cmus-remote -n
+click-right = cmus-remote -r
+click-middle = cmus-remote -u
+format-prefix = " | "
+format-suffix = " |"
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+label-foreground = ${colors.foreground}
+
+[module/i3]
+type = internal/i3
+; Only show workspaces defined on the same output as the bar
+;
+; Useful if you want to show monitor specific workspaces
+; on different bars
+;
+; Default: false
+pin-workspaces = false
+
+; This will split the workspace name on ':'
+; Default: false
+strip-wsnumbers = true
+
+; Sort the workspaces by index instead of the default
+; sorting that groups the workspaces by output
+; Default: false
+index-sort = true
+
+; Create click handler used to focus workspace
+; Default: true
+enable-click = true
+
+; Create scroll handlers used to cycle workspaces
+; Default: true
+enable-scroll = false
+
+; Wrap around when reaching the first/last workspace
+; Default: true
+wrapping-scroll = false
+
+; Set the scroll cycle direction 
+; Default: true
+reverse-scroll = false
+
+; Use fuzzy (partial) matching on labels when assigning 
+; icons to workspaces
+; Example: code;♚ will apply the icon to all workspaces 
+; containing 'code' in the label
+; Default: false
+fuzzy-match = true
+
+label-focused = %name%
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.background}
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name%
+label-unfocused-foreground = ${colors.highlight}
+label-unfocused-background = ${colors.background}
+label-unfocused-padding = 1
+
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label>
+format-foreground = ${colors.foreground}
+label = %percentage%%
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+; Seconds to sleep between progressbar/song timer sync, Default: 1
+interval = 2
+format-online = <label-song>
+format-online-prefix = " "
+format-online-prefix-foreground = ${colors.foreground-alt}
+label-song = %artist% - %title%
+label-offline = mpd is offline
+
+[module/current-song-spotify]
+type = custom/script
+exec = ~/Scripts/spotify.sh %artist% - %title%
+tail = true
+interval = 2
+
+[module/time]
+type = internal/date
+interval = 5
+time = %I:%M
+time-alt = %H:%M:%S
+format-prefix-foreground = ${colors.foreground}
+label = %time%
+
+[module/date]
+type = internal/date
+interval = 1
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = ""
+format-foreground = ${colors.foreground}
+date = "%Y/%m/%d | "
+date-alt = "It is day %j, week %V, of year %y of the %Cth century;"
+time = "%I:%M %p"
+time-alt = " %z %Z."
+label = " %date%%time% "
+
+[module/volume]
+type = internal/alsa
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL
+label-volume-foreground = ${root.foreground}
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.foreground}
+bar-volume-foreground-1 = ${colors.foreground}
+bar-volume-foreground-2 = ${colors.foreground}
+bar-volume-foreground-3 = ${colors.foreground}
+bar-volume-foreground-4 = ${colors.foreground}
+bar-volume-foreground-5 = ${colors.foreground}
+bar-volume-foreground-6 = ${colors.foreground-alt}
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume-prefix = " "
+format-muted-prefix = " "
+format-volume-prefix-foreground = ${colors.foreground-alt}
+format-muted-prefix-foreground = ${colors.foreground-alt}
+label-muted-foreground = ${colors.urgent}
+label-volume-foreground = ${colors.foreground}
+format-muted-foreground = ${colors.foreground}
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+;sink = alsa_output.pci-0000_12_00.3.analog-stereo
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 3
+
+
+; common settings inherited by all bars
+[bar/i3main]
+enable-ipc = true
+width = 100%
+height = 25
+offset-y = 0%
+radius = 0.0
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 2
+line-color = #f00
+border-size = 0
+border-color = #00000000
+padding-left = 1
+padding-right = 2
+padding-top = 4
+padding-bottom = 4
+module-margin-left = 1
+module-margin-right = 1
+font-0 = "Source Code Pro:pixelsize=14;2"
+font-1 = "FontAwesome:style=Regular:pixelsize=12;2"
+font-2 = "Iosevka:style=Regular:pixelsize=12;2"
+font-3 = "Source Han Sans JP:style=Regular:pixelsize=12;2" ; to get fullwidth chars (aesthetic chillhop song titles)
+; tray-detached = false
+; tray-position = right
+; tray-offset-x = 0
+; tray-offset-y = 0
+; tray-maxsize = 16
+; tray-padding = 0
+; tray-scale = 1
+; tray-background = ${colors.background}
+
+;     __         ______     ____  _            __           
+;    / /   ___  / __/ /_   / __ \(_)________  / /___ ___  __
+;   / /   / _ \/ /_/ __/  / / / / / ___/ __ \/ / __ `/ / / /
+;  / /___/  __/ __/ /_   / /_/ / (__  ) /_/ / / /_/ / /_/ / 
+; /_____/\___/_/  \__/  /_____/_/____/ .___/_/\__,_/\__, /  
+;                                   /_/            /____/   
+
+
+[bar/left]
+inherit = bar/i3main
+monitor = DP-2
+
+; attempts at getting the REST of the nonfree fontawesome icons to show
+font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
+font-5 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
+font-6 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
+
+modules-left = xmenu-left i3
+modules-center = 
+modules-right = player-cmus spotify pulseaudio dunst blur-toggle
+
+
+
+;    ______           __               ____  _            __           
+;   / ____/__  ____  / /____  _____   / __ \(_)________  / /___ ___  __
+;  / /   / _ \/ __ \/ __/ _ \/ ___/  / / / / / ___/ __ \/ / __ `/ / / /
+; / /___/  __/ / / / /_/  __/ /     / /_/ / (__  ) /_/ / / /_/ / /_/ / 
+; \____/\___/_/ /_/\__/\___/_/     /_____/_/____/ .___/_/\__,_/\__, /  
+;                                              /_/            /____/   
+
+[bar/center]
+inherit = bar/i3main
+monitor = DP-1
+modules-left = xmenu-middle i3
+modules-center = date
+modules-right = player-cmus spotify pulseaudio cpu 
+
+
+
+;     ____  _       __    __     ____  _            __           
+;    / __ \(_)___ _/ /_  / /_   / __ \(_)________  / /___ ___  __
+;   / /_/ / / __ `/ __ \/ __/  / / / / / ___/ __ \/ / __ `/ / / /
+;  / _, _/ / /_/ / / / / /_   / /_/ / (__  ) /_/ / / /_/ / /_/ / 
+; /_/ |_/_/\__, /_/ /_/\__/  /_____/_/____/ .___/_/\__,_/\__, /  
+;         /____/                         /_/            /____/
+
+[bar/right]
+inherit = bar/i3main
+monitor = HDMI-1
+; font-1 = FontAwesome5Free:style=Solid:size=10;4 this is another font that works
+; font-2 = FontAwesome5Free:style=Regular:size=10;4
+; font-3 = FontAwesome5Brands:style=Regular:size=10;4
+modules-left = xmenu-right i3
+modules-center = 
+modules-right = pulseaudio networkspeeddown blur-toggle kdeconnect
+tray-detached = false
+tray-position = right
+tray-offset-x = 0
+tray-offset-y = 0
+tray-maxsize = 16
+tray-padding = 0
+tray-scale = 1
+tray-background = ${colors.background}
