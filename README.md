@@ -339,6 +339,7 @@
 - [cmus](https://github.com/cmus/cmus): Lightweight console music player
 - [youtube-dl](https://github.com/ytdl-org/youtube-dl/): Easily download music and videos
 - [jftui](https://github.com/Aanok/jftui): Jellyfin TUI interface
+- [swaglyrics](https://aur.archlinux.org/packages/swaglyrics/): Spotify lyrics in browser or terminal
 #### Games
 - [tetris-terminal](https://aur.archlinux.org/packages/tetris-terminal-git): Tetris in the terminal
 - [tty-solitaire](https://aur.archlinux.org/packages/tty-solitaire-git/): Solitaire in the terminal
