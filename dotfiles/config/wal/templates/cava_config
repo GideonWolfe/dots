@@ -1,0 +1,37 @@
+[general]
+framerate = 80
+
+#█▓▒░ The number of bars (0-200). 0 sets it to auto (fill up console).
+#█▓▒░ Bars' width and space between bars in number of characters.
+bar_width = 1
+bar_spacing = 1
+
+[color]
+gradient = 1
+gradient_count = 4
+gradient_color_1 = '{color1}'
+gradient_color_2 = '{color2}'
+gradient_color_3 = '{color4}'
+gradient_color_4 = '{color5}'
+gradient_color_5 = '{color6}'
+
+[output]
+#█▓▒░ Ouput method. Can be 'ncurses', 'noncurses' or 'raw'.
+#█▓▒░ 'noncurses' is for systems that does not suport ncurses.
+#█▓▒░ 'raw' is a 16 bit data stream of the bar heights that can be used to send to other applications.
+#█▓▒░ 'raw' defaults to 200 bars, which can be adjusted in the 'bars' option above.
+method = ncurses
+
+#█▓▒░ Visual channels. Can be 'stereo' or 'mono'.
+#█▓▒░ 'stereo' mirrors both channels with low frequencies in center.
+#█▓▒░ 'mono' averages both channels and outputs left to right lowest to highest frequencies.
+channels = mono
+
+[smoothing]
+#█▓▒░ Percentage value for integral smoothing. Takes values from 0 - 100.
+#█▓▒░ Higher values means smoother, but less precise. 0 to disable.
+integral = 85
+
+#█▓▒░ Set gravity percentage for "drop off". Higher values means bars will drop faster.
+#█▓▒░ Accepts only non-negative values. 50 means half gravity, 200 means double. Set to 0 to disable "drop off".
+gravity = 100

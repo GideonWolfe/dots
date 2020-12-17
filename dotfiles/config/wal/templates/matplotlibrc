@@ -1,0 +1,25 @@
+# Color for X and Y tick labels
+xtick.color: {foreground.strip}
+ytick.color: {foreground.strip}
+
+# Display Grid
+axes.grid: True
+# Grid color
+grid.color: {foreground.strip}
+
+# Colors for line numbers
+axes.prop_cycle: cycler('color', ['{color2.strip}', '{color3.strip}', '{color4.strip}', '{color4.strip}', '{color5.strip}', '{color6.strip}', '{color7.strip}', '{color8.strip}', '{color9.strip}', '{color10.strip}'])
+
+# Axes Edge Color
+axes.edgecolor: {color6.strip}
+
+# Background color around graph
+figure.facecolor: {background.strip}
+
+# Axes title color
+axes.titlecolor: {foreground.strip}
+axes.labelcolor: {foreground.strip}
+text.color: {foreground.strip}
+
+# Background Color
+axes.facecolor: {background.strip}

@@ -1,0 +1,29 @@
+{{
+    "colors": {{
+        "r": 170,
+        "g": 207,
+        "b": 209,
+        "black": "{background}",
+        "light_black": "{background}",
+        "grey": "{color7}"
+    }},
+    "cssvars": {{
+        "font_main": "United Sans Medium",
+        "font_main_light": "United Sans Light"
+    }},
+    "terminal": {{ 
+        "fontFamily": "Hack",
+        "cursorStyle": "block",
+        "foreground": "{foreground}",
+        "background": "{background}",
+        "cursor": "{background}",
+        "cursorAccent": "{color11}",
+        "selection": "{color3.rgba}"
+    }},
+    "globe": {{
+        "base": "{foreground}",
+        "marker": "{color3}",
+        "pin": "{color9}",
+        "satellite": "{color11}"
+    }}
+}}

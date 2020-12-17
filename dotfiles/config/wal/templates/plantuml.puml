@@ -1,0 +1,443 @@
+!if %not(%variable_exists("$BGCOLOR"))
+!$BGCOLOR = "transparent"
+!endif
+
+skinparam backgroundColor $BGCOLOR
+
+''
+'' Colors taken from the css file of the BS theme
+''
+!$BLUE = "{color4}"
+!$INDIGO = "{color5}"
+!$PURPLE = "{color6}"
+!$PINK = "{color7}"
+!$RED = "{color9}"
+!$ORANGE = "{color8}"
+!$YELLOW = "{color3}"
+!$GREEN = "{color2}"
+!$TEAL = "{color6}"
+!$CYAN = "{color12}"
+!$WHITE = "{foreground}"
+!$GRAY_DARK = "{color8}"
+!$GRAY = "{color9}"
+!$PRIMARY = "{foreground}"
+!$SECONDARY = "{color7}"
+!$SUCCESS = "{color4}"
+!$INFO = "{color3}"
+!$WARNING = "{color2}"
+!$DANGER = "{color12}"
+!$LIGHT = "{color6}"
+!$DARK = "{color10}"
+
+'' *_LIGHT = tint (lighter) of the main color of 80%
+''          where TINT is calculated by clr + (255-clr) * tint_factor
+'' *_DARK = shade (darker) of the main color of 80%
+''          and SHADE is calculated by clr * (1 - shade_factor)
+''
+!$FGCOLOR = $DARK
+!$PRIMARY_LIGHT = "{color7}"
+!$PRIMARY_DARK = "{color8}"
+!$PRIMARY_TEXT = $WHITE
+!$SECONDARY_LIGHT = "{color7}"
+!$SECONDARY_DARK = "{color8}"
+!$SECONDARY_TEXT = $DARK
+!$INFO_LIGHT = "{color8}"
+!$INFO_DARK = "{color9}"
+!$INFO_TEXT = $WHITE
+!$SUCCESS_LIGHT = "{color2}"
+!$SUCCESS_DARK = "{color8}"
+!$SUCCESS_TEXT = $WHITE
+!$WARNING_LIGHT = "{color7}"
+!$WARNING_DARK = "{color3}"
+!$WARNING_TEXT = $WHITE
+!$DANGER_LIGHT = "{color6}"
+!$DANGER_DARK = "{color9}"
+!$DANGER_TEXT = $WHITE
+
+!procedure $success($msg)
+  <font color=$SUCCESS><b>$msg
+!endprocedure
+
+!procedure $failure($msg)
+  <font color=$DANGER><b>$msg
+!endprocedure
+
+!procedure $warning($msg)
+  <font color=$WARNING><b>$msg
+!endprocedure
+
+!procedure $primary_scheme()
+	FontColor $PRIMARY_TEXT
+	BorderColor $PRIMARY
+	BackgroundColor transparent
+!endprocedure
+
+''
+'' Global Default Values
+''
+skinparam defaultFontName        "Verdana"
+skinparam defaultFontSize        12
+skinparam dpi                    100
+skinparam shadowing              false
+skinparam roundcorner            0
+skinparam ParticipantPadding     40
+skinparam BoxPadding             40
+skinparam Padding                5
+skinparam stereotype {{
+    '' background of circle for classes
+    CBackgroundColor $LIGHT
+    CBorderColor $SECONDARY_DARK
+    '' background of circle for abstracts
+    ABackgroundColor $GREEN
+    ABorderColor $SUCCESS_DARK
+    '' background of circle for interfaces
+    IBackgroundColor $CYAN
+    IBorderColor $DANGER_DARK
+    EBackgroundColor $TEAL
+    EBorderColor $WARNING_DARK
+    NBackgroundColor transparent
+    NBorderColor $INFO_DARK
+}}
+skinparam title {{
+	FontColor	                 $CYAN
+	BorderColor	                 $BLUE
+	FontSize	    	         20
+	BorderRoundCorner            0
+	BorderThickness 	         0
+	BackgroundColor            $BGCOLOR
+}}
+
+
+skinparam legend {{
+	BackgroundColor transparent
+	BorderColor $SECONDARY_DARK
+  FontColor $PRIMARY_TEXT
+}}
+
+!startsub swimlane
+skinparam swimlane {{
+	BorderColor $INFO
+	BorderThickness 2
+	TitleBackgroundColor  $SECONDARY_LIGHT-$SECONDARY
+	TitleFontColor $PRIMARY
+}}
+!endsub
+
+!startsub activity
+
+skinparam activity {{
+	$primary_scheme()
+	BarColor $SUCCESS
+	StartColor $INFO
+	EndColor $INFO
+	''
+	DiamondBackgroundColor $BGCOLOR
+  	DiamondBorderColor $SECONDARY_DARK
+	DiamondFontColor $SECONDARY_TEXT
+}}
+!endsub
+
+!startsub participant
+
+skinparam participant {{
+	$primary_scheme()
+  Color $GREEN
+	ParticipantBorderThickness 2
+}}
+!endsub
+
+!startsub actor
+
+skinparam actor {{
+	$primary_scheme()
+	BorderColor $PINK
+	FontColor $BLUE
+}}
+!endsub
+
+!startsub arrow
+
+skinparam arrow {{
+	Thickness 3
+	Color $INDIGO
+	FontColor $PRIMARY
+  LollipopColor $GREEN
+}}
+!endsub
+
+!startsub sequence
+
+skinparam sequence {{
+	BorderColor $PRIMARY
+	' For some reason sequence title font color does not pick up from global
+	TitleFontColor $PRIMARY
+	BackgroundColor $BGCOLOR
+	StartColor $BLUE
+	EndColor $GREEN
+	''
+	BoxBackgroundColor $BGCOLOR
+	BoxBorderColor $PURPLE
+	BoxFontColor $DARK
+	''
+	LifeLineBorderColor $SECONDARY_DARK
+	LifeLineBorderThickness 2
+	LifeLineBackgroundColor $YELLOW
+	''
+	GroupBorderColor $PURPLE
+	GroupFontColor $PRIMARY
+	GroupHeaderFontColor $PRIMARY
+  GroupBackgroundColor $BGCOLOR
+  GroupBodyBackgroundColor $BGCOLOR
+	''
+	DividerBackgroundColor $BLUE
+    DividerFontColor {background}
+    DividerBorderColor $GRAY
+    DividerBorderThickness 2
+	''
+	ReferenceBackgroundColor $BGCOLOR
+	ReferenceBorderColor $BLUE
+	ReferenceFontColor $PRIMARY
+	ReferenceHeaderFontColor $INFO
+}}
+!endsub
+
+!startsub partition
+
+skinparam partition {{
+	BorderColor $PRIMARY
+	FontColor $PRIMARY
+	BackgroundColor $BGCOLOR
+}}
+!endsub
+
+!startsub collections
+
+skinparam collections {{
+	$primary_scheme()
+  BorderColor $INDIGO
+}}
+!endsub
+
+!startsub control
+
+skinparam control {{
+	$primary_scheme()
+	FontColor $DARK
+}}
+!endsub
+
+!startsub entity
+
+skinparam entity {{
+	$primary_scheme()
+	FontColor $DARK
+}}
+!endsub
+
+!startsub boundary
+
+skinparam boundary {{
+	$primary_scheme()
+	FontColor $DARK
+}}
+!endsub
+
+!startsub agent
+
+skinparam agent {{
+	BackgroundColor $BGCOLOR
+	BorderColor $BLUE
+	FontColor $PRIMARY
+}}
+!endsub
+
+!startsub note
+
+skinparam note {{
+	BorderThickness 1
+	BackgroundColor $BGCOLOR
+	BorderColor $INDIGO
+	FontColor $PRIMARY
+}}
+!endsub
+
+!startsub artifact
+
+skinparam artifact {{
+	BackgroundColor $BGCOLOR
+	BorderColor $SECONDARY_DARK
+	FontColor $SECONDARY_TEXT
+}}
+!endsub
+
+!startsub component
+
+skinparam component {{
+	$primary_scheme()
+  FontColor $PRIMARY_LIGHT
+  BorderColor $YELLOW
+}}
+!endsub
+
+!startsub interface
+
+skinparam interface {{
+	BackgroundColor  $DANGER_LIGHT
+	BorderColor  $DANGER
+	FontColor $DARK
+}}
+!endsub
+
+!startsub storage
+
+skinparam storage {{
+	BackgroundColor $BGCOLOR
+  	BorderColor $WARNING
+	FontColor $WARNING_TEXT
+}}
+!endsub
+
+!startsub node
+
+skinparam node {{
+	BackgroundColor $BGCOLOR
+	BorderColor $CYAN
+	FontColor $PRIMARY
+}}
+!endsub
+
+!startsub cloud
+
+skinparam cloud {{
+	BackgroundColor $BGCOLOR
+	BorderColor $PURPLE
+	FontColor $PRIMARY
+}}
+!endsub
+
+!startsub database
+
+skinparam database {{
+	$primary_scheme()
+	FontColor $PRIMARY
+}}
+!endsub
+
+!startsub class
+
+skinparam class {{
+	$primary_scheme()
+	HeaderBackgroundColor $BGCOLOR
+	StereotypeFontColor $RED
+	BorderThickness 1
+	AttributeFontColor $LIGHT
+	AttributeFontSize 11
+}}
+!endsub
+
+!startsub object
+
+skinparam object {{
+	$primary_scheme()
+	StereotypeFontColor $DARK
+	BorderThickness 1
+	AttributeFontColor $SECONDARY_TEXT
+	AttributeFontSize 11
+}}
+!endsub
+
+!startsub usecase
+
+skinparam usecase {{
+	$primary_scheme()
+	BorderThickness 2
+	BorderColor $BLUE
+	FontColor $TEAL
+	StereotypeFontColor $PRIMARY
+}}
+!endsub
+
+!startsub rectangle
+
+skinparam rectangle {{
+	FontColor $PRIMARY
+	BorderColor $PRIMARY_LIGHT
+	BackgroundColor $BGCOLOR
+	BorderThickness 2
+	StereotypeFontColor $PRIMARY
+}}
+!endsub
+
+!startsub package
+
+skinparam package {{
+	FontColor $PRIMARY
+	BorderColor $PURPLE
+	BackgroundColor $BGCOLOR
+	BorderThickness 2
+}}
+!endsub
+
+!startsub folder
+
+skinparam folder {{
+	BackgroundColor $BGCOLOR
+  	BorderColor $WARNING
+	FontColor $PRIMARY
+	BorderThickness 2
+}}
+!endsub
+
+!startsub frame
+
+skinparam frame {{
+	BackgroundColor $BGCOLOR
+  	BorderColor $INFO
+	FontColor $INFO
+	BorderThickness 2
+}}
+!endsub
+
+!startsub state
+
+skinparam state {{
+	$primary_scheme()
+	StartColor $INFO
+	EndColor $INFO
+	AttributeFontColor $SECONDARY_TEXT
+	AttributeFontSize 11
+}}
+!endsub
+
+!startsub queue
+
+skinparam queue {{
+	$primary_scheme()
+}}
+!endsub
+
+!startsub card
+
+skinparam card {{
+	BackgroundColor $INFO_LIGHT-$INFO
+	BorderColor $INFO
+	FontColor $INFO_TEXT
+}}
+!endsub
+
+!startsub file
+
+skinparam file {{
+	BackgroundColor $SECONDARY_LIGHT-$SECONDARY
+	BorderColor $INFO
+	FontColor $GRAY
+
+}}
+!endsub
+
+!startsub stack
+
+skinparam stack {{
+	$primary_scheme()
+}}
+!endsub
