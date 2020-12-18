@@ -387,6 +387,10 @@ exec_always ~/.config/polybar/scripts/launch.sh
 # for urxvt, use following format:
 # exec_always urxvt -name translate -e fish -c 'trans -I'
 
+# ensure that timer scratchpads 
+# (spawned with my script) are always floated
+for_window [instance="timer"] floating enable;
+
 #math scratchpad
 exec_always alacritty --class math -e fish -c 'qalc'
 for_window [instance="math"] floating enable;
