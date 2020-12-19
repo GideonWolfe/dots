@@ -337,6 +337,7 @@
 - [cava](https://github.com/karlstav/cava): Console music visualizer
 - [glava](https://github.com/jarcode-foss/glava):  OpenGL audio spectrum visualizer 
 - [cmus](https://github.com/cmus/cmus): Lightweight console music player
+- [cmus-notify](https://github.com/dcx86r/cmus-notify): Notifications for `cmus`
 - [youtube-dl](https://github.com/ytdl-org/youtube-dl/): Easily download music and videos
 - [jftui](https://github.com/Aanok/jftui): Jellyfin TUI interface
 - [swaglyrics](https://aur.archlinux.org/packages/swaglyrics/): Spotify lyrics in browser or terminal
