@@ -2,6 +2,8 @@
 ![](https://i.imgur.com/1CDBEv8.png)
 ![](https://i.imgur.com/9W7ZHmP.png)
 
+[![HitCount](http://hits.dwyl.com/GideonWolfe/dots.svg)](http://hits.dwyl.com/GideonWolfe/dots)
+
 # Gallery
 
 ## System
